@@ -1,0 +1,7 @@
+<h2 (click)="clickA()">My Chargings</h2>
+<button mat-raised-button color="primary">Primary</button>
+<ul class="item">
+    <li *ngFor="let item of chargings">
+        <span class="badge">{{item.id}}</span> {{item.name}}
+    </li>
+</ul>

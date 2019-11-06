@@ -1,24 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HeroesComponent } from '../home/heroes.component';
-import { LoginComponent } from './login.component';
-import { TestComponent } from '../test/test.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { PagesComponent } from './pages.component';
 
 const routes: Routes = [{
     path: '',
-    component: LoginComponent,
+    component: PagesComponent,
     children: [
         {
-            path: 'test',
-            component: HeroesComponent,
-        },
-        {
-            path: 'test2',
-            component: TestComponent,
+            path: 'dashboard',
+            component: DashboardComponent,
         },
         {
             path: '',
-            redirectTo: 'test',
+            redirectTo: 'dashboard',
             pathMatch: 'full',
         },
     ]
