@@ -1,13 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material/core';
+
+import { Router } from '@angular/router';
+import { AuthService } from '../@core/auth/auth.service';
 
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
-    constructor() { }
+    constructor(public router: Router, public authService: AuthService) { }
     arr = [
         {
             id: 1,
@@ -18,7 +23,16 @@ export class LoginComponent implements OnInit {
             name: 'aaa'
         },
     ];
-    ngOnInit() {
+    login() {
+        this.authService.login().subscribe(() => {
+            if (this.authService.isLoggedIn) {
+                this.router.navigateByUrl('/pages/dashboard');
+            }
+        });
+    }
+
+    logout() {
+        this.authService.logout();
     }
 
 }

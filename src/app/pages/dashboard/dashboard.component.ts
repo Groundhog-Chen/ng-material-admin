@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, OnDestroy, AfterViewChecked } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges, OnDestroy } from '@angular/core';
 import { Charging } from '../../@core/types/dashboard';
 
 @Component({
@@ -6,7 +6,7 @@ import { Charging } from '../../@core/types/dashboard';
     templateUrl: './dashboard.component.html',
     styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit, OnChanges, OnDestroy, AfterViewChecked {
+export class DashboardComponent implements OnInit, OnChanges, OnDestroy {
 
     constructor() { }
 
@@ -66,23 +66,26 @@ export class DashboardComponent implements OnInit, OnChanges, OnDestroy, AfterVi
     ngOnInit() {
         console.log('ngOnInit');
     }
-    OnChanges() {
-        console.log('OnChanges');
+    ngOnChanges(changes: SimpleChanges) {
+        console.log(changes);
     }
-    OnDestroy() {
+    ngOnDestroy(): void {
         console.log('OnDestroy');
     }
-    AfterViewChecked() {
-        console.log('AfterViewChecked');
-    }
-
 
     clickA() {
         this.count += 1;
-        this.chargings.push({
-            name: 'name' + this.count,
-            className: 's1',
-            id: 1
-        });
+        this.chargings = [
+            {
+                name: 'name' + this.count,
+                className: 's1',
+                id: 1
+            }
+        ];
+        // this.chargings.push({
+        //     name: 'name' + this.count,
+        //     className: 's1',
+        //     id: 1
+        // });
     }
 }
