@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { tap, delay } from 'rxjs/operators';
 
@@ -7,6 +7,7 @@ import { tap, delay } from 'rxjs/operators';
     providedIn: 'root',
 })
 export class AuthService {
+    constructor(private router: Router) { }
     isLoggedIn = false;
 
     // store the URL so we can redirect after logging in
@@ -21,6 +22,7 @@ export class AuthService {
 
     logout(): void {
         this.isLoggedIn = false;
+        this.router.navigateByUrl('/login');
     }
 }
 

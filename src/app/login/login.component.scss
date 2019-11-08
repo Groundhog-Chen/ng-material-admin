@@ -6,10 +6,11 @@
     justify-content: center;
     transition: all 0.5s;
     animation: fadeIn 0.5s;
+    background: #fff;
     .wrap {
         .wrap_title {
             font-size: 50px;
-            color: #fff;
+            color: #3f51b5;
             text-align: center;
             margin-bottom: 90px;
             animation: fadeInUp 0.5s;
@@ -55,9 +56,15 @@
         }
     }
 }
-.login_mlmlh {
-    transform: scale(5);
-    opacity: 0;
+.mlmlh {
+    .wrap {
+        .wrap_title {
+            animation: fadeOutDown 0.3s linear;
+        }
+        .inner_card {
+            animation: fadeOutDown 0.3s linear;
+        }
+    }
 }
 
 .primary {
@@ -65,16 +72,19 @@
 }
 @media screen and (max-width: 960px) and (min-width: 320px) {
     .login_container {
+        background: #3f51b5;
         .wrap {
             .wrap_title {
                 font-size: 36px;
+                color: #fff;
                 margin-bottom: 30px;
             }
             .inner_card {
                 width: auto;
+                display: block;
                 margin: 30px;
                 .left {
-                    flex: 0 0 auto;
+                    flex: none;
                     padding: 30px;
                 }
                 .right {

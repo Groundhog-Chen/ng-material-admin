@@ -1,5 +1,6 @@
 import { Component, OnInit, OnChanges, SimpleChanges, OnDestroy } from '@angular/core';
 import { Charging } from '../../@core/types/dashboard';
+import { Router, Routes } from '@angular/router';
 
 @Component({
     selector: 'app-dashboard',
@@ -8,7 +9,7 @@ import { Charging } from '../../@core/types/dashboard';
 })
 export class DashboardComponent implements OnInit, OnChanges, OnDestroy {
 
-    constructor() { }
+    constructor(private router: Router) { }
 
     chargings: Charging[] = [
         {
@@ -64,7 +65,7 @@ export class DashboardComponent implements OnInit, OnChanges, OnDestroy {
     ];
     count = 0;
     ngOnInit() {
-        console.log('ngOnInit');
+        // console.log(this.router);
     }
     ngOnChanges(changes: SimpleChanges) {
         console.log(changes);

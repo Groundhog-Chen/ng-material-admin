@@ -1,2 +1,29 @@
-<p>pages works!</p>
-<router-outlet></router-outlet>
+<div class="pages_container">
+    <nav class="app_nav_bar">
+        <div class="menu_bar">
+            <a mat-button style="padding: 0;">
+                <!-- <mat-icon>email</mat-icon> -->
+                <mat-icon>apps</mat-icon>
+            </a>
+            <!-- <img _ngcontent-c1="" alt="angular" class="docs-angular-logo" src="https://material.angular.cn/assets/img/homepage/angular-white-transparent.svg"> -->
+            <a mat-button *ngFor="let item of routers" [routerLink]="item.path">{{ item.path }}</a>
+            <div class="separate"></div>
+            <a mat-button href="mailto:894620576@qq.com">
+                <!-- <mat-icon>email</mat-icon> -->
+                <mat-icon>email</mat-icon> <span> 894620576@qq.com</span>
+            </a>
+            <a mat-button href="https://github.com/Groundhog-Chen/ng-material-admin" target="_blank"
+                style="padding: 0 5px;">
+                <!-- <mat-icon>email</mat-icon> -->
+                <mat-icon>file_download</mat-icon>
+            </a>
+            <a mat-button (click)="authService.logout()" style="padding: 0 5px;">
+                <!-- <mat-icon>email</mat-icon> -->
+                <mat-icon>power_settings_new</mat-icon>
+            </a>
+        </div>
+        <div class="bar_zwf"></div>
+        <router-outlet></router-outlet>
+    </nav>
+
+</div>

@@ -3,7 +3,7 @@ import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/fo
 import { ErrorStateMatcher } from '@angular/material/core';
 
 import { Router } from '@angular/router';
-import { AuthService } from '../@core/auth/auth.service';
+import { AuthService } from '@/app/@core/auth/auth.service';
 
 @Component({
     selector: 'app-login',
@@ -13,19 +13,11 @@ import { AuthService } from '../@core/auth/auth.service';
 export class LoginComponent {
 
     constructor(public router: Router, public authService: AuthService) { }
-    arr = [
-        {
-            id: 1,
-            name: 'hhh'
-        },
-        {
-            id: 2,
-            name: 'aaa'
-        },
-    ];
+    mlmlh = false;
     login() {
         this.authService.login().subscribe(() => {
             if (this.authService.isLoggedIn) {
+                this.mlmlh = true;
                 this.router.navigateByUrl('/pages/dashboard');
             }
         });
