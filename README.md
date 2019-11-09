@@ -42,4 +42,4 @@ ng build
 ```
 ## Preview
 
-+ [http://chenhuajie.gitee.io/vue-material-admin/](http://chenhuajie.gitee.io/vue-material-admin/)
++ [http://chenhuajie.gitee.io/ng-material-admin/](http://chenhuajie.gitee.io/ng-material-admin/)
