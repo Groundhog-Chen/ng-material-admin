@@ -2,7 +2,7 @@
 
 基于 Angular8 做的一个后台内容管理模板，运行该项目的时候确保当前环境安装了[Angular CLI](https://github.com/angular/angular-cli) 8.3 以上版本的，
 
-## Development server && Build
+## 开发 && 打包
 
 ```
 // 如果没有安装 Angular CLI
@@ -14,7 +14,7 @@ ng serve --open
 // 构建
 ng build
 ```
-## Directory Structure
+## 目录结构
 ```
 ├─e2e                　　
 ├─src
@@ -40,6 +40,17 @@ ng build
 ├─README.md
 └─tslint.json
 ```
-## Preview
 
+## 预览地址
+
++ Vue 版 [http://chenhuajie.gitee.io/vue-material-admin/](http://chenhuajie.gitee.io/vue-material-admin/)
 + [http://chenhuajie.gitee.io/ng-material-admin/](http://chenhuajie.gitee.io/ng-material-admin/)
+
+## 截图
+
+![home](https://gitee.com/chenhuajie/ng-material-admin/raw/master/src/assets/vue-material-admin.png)
+![login](https://gitee.com/chenhuajie/ng-material-admin/raw/master/src/assets/login.png)
+
+## Emmm~
+
++ 如果喜欢或者对你有帮助就帮忙点个赞吧！
