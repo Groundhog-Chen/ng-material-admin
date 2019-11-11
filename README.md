@@ -1,19 +1,7 @@
 # ng-material-admin
 
-基于 Angular8 做的一个后台内容管理模板，运行该项目的时候确保当前环境安装了[Angular CLI](https://github.com/angular/angular-cli) 8.3 以上版本的，
+基于 Angular 8 做的一个后台内容管理简单模板，实现了简单依赖类注入权限登录服务、404跳转、二级路由功能，运行该项目的时候确保当前环境安装了 [Angular CLI](https://github.com/angular/angular-cli) 8.3 以上版本的，
 
-## 开发 && 打包
-
-```
-// 如果没有安装 Angular CLI
-npm install -g @angular/cli
-
-// 开发
-ng serve --open
-
-// 构建
-ng build
-```
 ## 目录结构
 ```
 ├─e2e                　　
@@ -22,7 +10,10 @@ ng build
 │  │  ├─@core
 │  │  ├─login
 │  │  ├─pages
-│  │  └─result
+│  │  ├─result
+│  │  ├─app-routing.module.ts
+│  │  ├─app.component.ts
+│  │  └─app.module
 │  ├─assets
 │  ├─environments 
 │  ├─favicon.ico
@@ -39,6 +30,19 @@ ng build
 ├─tsconfig.json
 ├─README.md
 └─tslint.json
+```
+
+## 开发 && 打包
+
+```
+// 如果没有安装 Angular CLI
+npm install -g @angular/cli
+
+// 开发
+ng serve --open
+
+// 构建
+ng build
 ```
 
 ## 预览地址
